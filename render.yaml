@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: tradefxbook
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: TRADEFXBOOK_SECRET
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    # Free plan storage is ephemeral — store.json resets on every redeploy/restart.
+    # Upgrade to a paid plan and uncomment below to persist trade/journal data:
+    # disk:
+    #   name: tradefxbook-data
+    #   mountPath: /opt/render/project/src/backend/data
+    #   sizeGB: 1

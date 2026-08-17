@@ -1,0 +1,9 @@
+{
+  "name": "tradefxbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "intensefxTRADES trading replay/journal tool",
+  "scripts": {
+    "test": "for f in tests/*.test.js; do node \"$f\" || exit 1; done"
+  }
+}

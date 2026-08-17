@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+venv/
+.venv/
+
+# Local runtime data (created automatically on first run)
+backend/store.json
+backend/market_cache/*.json
+
+# Node (if you run the JS tests locally)
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
